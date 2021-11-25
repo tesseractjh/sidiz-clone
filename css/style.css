@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Centra";
+  src: url("../fonts/Centra No2.ttf");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("../fonts/NotoSansKR-Regular.otf");
+}
+* {
+  font-family: "Centra", sans-serif;
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.header-gnb-top {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  height: 40px;
+  border-bottom: 1px solid #bcbcbc;
+}
+.header-gnb-top-cont {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-direction: row;
+  width: calc(100% - 240px);
+}
+.header-gnb-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 60px;
+  border-bottom: 1px solid #bcbcbc;
+}
+.header-gnb-bottom-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: calc(100% - 240px);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 340px;
+  height: 100%;
+  padding: 0 22px 0 25px;
+  border-left: 1px solid #bcbcbc;
+}
+.search:hover, .search:hover .search-bar {
+  background-color: #eeeeee;
+}
+.search:hover .search-btn {
+  color: #002BD2;
+}
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.search-bar {
+  width: 220px;
+  border: 0;
+}
+.search-btn {
+  height: 17px;
+  padding-top: 2px;
+}
+
+.link-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  width: 422px;
+  height: 100%;
+  border-left: 1px solid #bcbcbc;
+}
+.link-list-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: calc(100% - 50px);
+}
+.link-list-wrap li {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 13px;
+}
+.link-list-wrap li:hover {
+  color: #002BD2;
+}
+.link-list-compare {
+  font-family: "맑은 고딕", sans-serif;
+  font-size: 12px;
+}
+.link-list-compare:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  background: url("../images/compare.png") no-repeat center;
+  background-size: contain;
+  vertical-align: top;
+}
+.link-list-compare:hover {
+  font-family: "맑은 고딕", sans-serif;
+  font-size: 12px;
+}
+.link-list-compare:hover:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  background: url("../images/compare_hover.png") no-repeat center;
+  background-size: contain;
+  vertical-align: top;
+}
+.link-list-cart {
+  font-family: "맑은 고딕", sans-serif;
+  font-size: 12px;
+}
+.link-list-cart:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  background: url("../images/cart.png") no-repeat center;
+  background-size: contain;
+  vertical-align: top;
+}
+.link-list-cart:hover {
+  font-family: "맑은 고딕", sans-serif;
+  font-size: 12px;
+}
+.link-list-cart:hover:before {
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  background: url("../images/cart_hover.png") no-repeat center;
+  background-size: contain;
+  vertical-align: top;
+}
+
+.gnb-logo {
+  width: 80px;
+  height: 24px;
+}
+
+.gnb-menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 374px;
+}
+.gnb-menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 60px;
+  position: relative;
+}
+.gnb-menu-item:hover {
+  color: #002BD2;
+}
+.gnb-menu-item:hover .gnb-menu-dropdown {
+  display: block;
+}
+.gnb-menu-txt {
+  display: inline-block;
+  padding-top: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.gnb-menu-dropdown {
+  display: none;
+  position: absolute;
+  padding: 30px 30px 10px 30px;
+  background-color: #282828;
+  font-size: 14px;
+  color: #ffffff;
+}
+.gnb-menu-dropdown-list:not(:last-child) {
+  margin-bottom: 20px;
+}
+.gnb-menu-dropdown-txt {
+  display: inline-block;
+  height: 18px;
+  padding-bottom: 20px;
+  box-sizing: content-box;
+}
+.gnb-menu-dropdown-txt:hover {
+  color: #002BD2;
+}
+
+.dropdown-1 {
+  top: 60px;
+  left: -40px;
+  width: 165px;
+}
+.dropdown-2 {
+  top: 60px;
+  left: -40px;
+  width: auto;
+  height: 550px;
+}
+.dropdown-3 {
+  top: 60px;
+  left: -40px;
+  width: 165px;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 15px;
+}
+.bold:hover {
+  color: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */

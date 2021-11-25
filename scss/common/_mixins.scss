@@ -1,0 +1,22 @@
+@mixin flex($justify: stretch, $align: stretch, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin icon($name) {
+  font-family: '맑은 고딕', sans-serif;
+  font-size: 12px;
+
+  &:before {
+    display: inline-block;
+    content: '';
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+    background: url('../images/#{$name}.png') no-repeat center;
+    background-size: contain;
+    vertical-align: top;
+  }
+}
