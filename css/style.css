@@ -74,11 +74,11 @@ a:visited {
 
 @font-face {
   font-family: "Centra";
-  src: url("../fonts/Centra No2.ttf");
+  src: url("../fonts/CentraNo2-Book.woff");
 }
 @font-face {
   font-family: "Noto Sans KR";
-  src: url("../fonts/NotoSansKR-Regular.otf");
+  src: url("../fonts/NotoSansKR-Regular.woff");
 }
 * {
   font-family: "Centra", sans-serif;
@@ -96,26 +96,26 @@ a:visited {
   clip: rect(0, 0, 0, 0);
 }
 
+.bold-hover:hover, .dropdown-list-txt:hover, .dropdown-txt:hover, .gnb-menu-dropdown-txt:hover, .gnb-menu-item:hover, .link-list-wrap li:hover {
+  color: #002BD2;
+}
+
 .header-gnb-top {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  flex-direction: row;
   height: 40px;
   border-bottom: 1px solid #bcbcbc;
 }
 .header-gnb-top-cont {
   display: flex;
   justify-content: flex-end;
-  align-items: stretch;
-  flex-direction: row;
   width: calc(100% - 240px);
 }
 .header-gnb-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  position: relative;
   height: 60px;
   border-bottom: 1px solid #bcbcbc;
 }
@@ -123,7 +123,6 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   width: calc(100% - 240px);
 }
 
@@ -131,7 +130,6 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   width: 340px;
   height: 100%;
   padding: 0 22px 0 25px;
@@ -147,7 +145,6 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   width: 100%;
 }
 .search-bar {
@@ -157,13 +154,13 @@ a:visited {
 .search-btn {
   height: 17px;
   padding-top: 2px;
+  font-stretch: 50%;
 }
 
 .link-list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-direction: row;
   width: 422px;
   height: 100%;
   border-left: 1px solid #bcbcbc;
@@ -172,15 +169,11 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   width: calc(100% - 50px);
 }
 .link-list-wrap li {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 13px;
-}
-.link-list-wrap li:hover {
-  color: #002BD2;
 }
 .link-list-compare {
   font-family: "맑은 고딕", sans-serif;
@@ -248,19 +241,13 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   width: 374px;
 }
 .gnb-menu-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   height: 60px;
-  position: relative;
-}
-.gnb-menu-item:hover {
-  color: #002BD2;
 }
 .gnb-menu-item:hover .gnb-menu-dropdown {
   display: block;
@@ -276,6 +263,7 @@ a:visited {
   position: absolute;
   padding: 30px 30px 10px 30px;
   background-color: #282828;
+  font-family: "Centra", sans-serif;
   font-size: 14px;
   color: #ffffff;
 }
@@ -288,33 +276,59 @@ a:visited {
   padding-bottom: 20px;
   box-sizing: content-box;
 }
-.gnb-menu-dropdown-txt:hover {
-  color: #002BD2;
-}
 
 .dropdown-1 {
   top: 60px;
-  left: -40px;
+  right: 370px;
   width: 165px;
 }
 .dropdown-2 {
   top: 60px;
-  left: -40px;
-  width: auto;
-  height: 550px;
+  right: 0;
+  width: 700px;
 }
 .dropdown-3 {
   top: 60px;
-  left: -40px;
-  width: 165px;
+  right: 40px;
+  width: 195px;
+}
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+.dropdown-txt {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 100%;
+  border-right: 1px solid #444444;
+  box-sizing: content-box;
+}
+.dropdown-list {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 30px;
+}
+.dropdown-list-item {
+  display: flex;
+  align-items: center;
+}
+.dropdown-list-txt {
+  display: inline-block;
+  box-sizing: content-box;
+  margin-right: 15px;
 }
 
 .bold {
   font-weight: 700;
-  font-size: 15px;
 }
 .bold:hover {
   color: inherit;
+}
+.bold-hover {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

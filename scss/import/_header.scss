@@ -15,6 +15,7 @@
 
     &-bottom {
       @include flex(center, center);
+      position: relative;
       height: 60px;
       border-bottom: 1px solid #bcbcbc;
 
@@ -54,6 +55,7 @@
   &-btn {
     height: 17px;
     padding-top: 2px;
+    font-stretch: 50%;
   }
 }
 
@@ -70,10 +72,7 @@
     & li {
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 13px;
-
-      &:hover {
-        color: #002BD2;
-      }
+      @extend %txt-hover;
     }
   }
 
@@ -103,30 +102,12 @@
   &-list {
     @include flex(space-between, center);
     width: 374px;
-
-    // & dt {
-    //   display: inline-block;
-    //   float: left;
-    //   height: 18px;
-    //   padding: 0 20px 24px 0;
-    //   margin-right: 20px;
-    //   border-right: 1px solid #444444;
-    // }
-
-    // & dl {
-    //   display: inline-block;
-    //   float: left;
-    // }
   }
 
   &-item {
     @include flex(center, center);
     height: 60px;
-    position: relative;
-
-    &:hover {
-      color: #002BD2;
-    }
+    @extend %txt-hover;
   }
 
   &-item:hover &-dropdown {
@@ -145,6 +126,7 @@
     position: absolute;
     padding: 30px 30px 10px 30px;
     background-color: #282828;
+    font-family: 'Centra', sans-serif;
     font-size: 14px;
     color: #ffffff;
 
@@ -157,10 +139,7 @@
       height: 18px;
       padding-bottom: 20px;
       box-sizing: content-box;
-
-      &:hover {
-        color: #002BD2;
-      }
+      @extend %txt-hover;
     }
   }
 }
@@ -168,29 +147,63 @@
 .dropdown {
   &-1 {
     top: 60px;
-    left: -40px;
+    right: 370px;
     width: 165px;
   }
 
   &-2 {
     top: 60px;
-    left: -40px;
-    width: auto;
-    height: 550px;
+    right: 0;
+    width: 700px;
   }
 
   &-3 {
     top: 60px;
-    left: -40px;
-    width: 165px;
+    right: 40px;
+    width: 195px;
+  }
+
+  &-item {
+    @include flex(false, center);
+    height: 44px;
+  }
+
+  &-txt {
+    @include flex(false, center);
+    width: 160px;
+    height: 100%;
+    border-right: 1px solid #444444;
+    box-sizing: content-box;
+    @extend %txt-hover;
+  }
+
+  &-list {
+    @include flex(false, center);
+    flex: 1;
+    padding-left: 30px;
+
+    &-item {
+      @include flex(false, center);
+    }
+
+    &-txt {
+      display: inline-block;
+      box-sizing: content-box;
+      margin-right: 15px;
+      @extend %txt-hover;
+    }
   }
 }
 
 .bold {
   font-weight: 700;
-  font-size: 15px;
   
   &:hover {
     color: inherit;
+  }
+
+  &-hover {
+    font-weight: 700;
+    @extend %txt-hover;
   }
 }

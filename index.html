@@ -14,7 +14,8 @@
       <div class="header-gnb-top-cont">
         <div class="search">
           <form action="/product/search" method="get" class="search-form">
-            <input type="text" name="q" class="search-bar">
+            <input type="text" id="search-bar" name="q" class="search-bar">
+            <label for="search-bar" class="sr-only">검색창</label>
             <button type="submit" class="search-btn">SEARCH</button>
           </form>
         </div>
@@ -75,15 +76,247 @@
           <li class="gnb-menu-item">
             <span class="gnb-menu-txt">PRODUCTS</span>
             <div class="gnb-menu-dropdown dropdown-2">
-              <dl class="gnb-menu-dropdown-list">
-                <dt>모든 제품보기</dt>
-                <dd>SMART FINDER</dd>
-              </dl>
+              <ul class="gnb-menu-dropdown-list">
+                <li class="dropdown-item">
+                  <span class="dropdown-txt bold">모든 제품보기</span>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">SMART FINDER</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <span class="dropdown-txt bold">브랜드 콜라보레이션</span>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">마블</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">디즈니</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">마블x시디즈 태스크</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T80</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T50</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">디즈니x시디즈 키즈</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">atti</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">ringo cover</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">사무용의자</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T80</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T55</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T50 AIR</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T50</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T40</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T25</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">TAB SQUARE</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">TAB PLUS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">학생용의자</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">ringo</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">mitto</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">ible</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T25</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T50</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">유아용의자</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">molti</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">atti</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">중역용의자</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">PRONARD</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">VESTO</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">CELIOS</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">NUO</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">회의실/컨퍼런스의자</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T50 side</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T40 side</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">T30 side</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">LOLLY</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">NOOI</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">인테리어의자</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">BUTTON</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">SPOON</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">MANE</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">EGA</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">M06</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">스툴/좌식의자</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">FUNGUS</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">PILLO</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">OUI</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">EGA</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">M05</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="javascript:void(0)" class="dropdown-txt bold-hover">액세서리</a>
+                  <ul class="dropdown-list">
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">headrest</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">hanger</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">cover·cushion</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">caster·glide</a>
+                    </li>
+                    <li class="dropdown-list-item">
+                      <a href="javascript:void(0)" class="dropdown-list-txt">footrest</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </li>
           <li class="gnb-menu-item">
             <span class="gnb-menu-txt">SUPPORT</span>
-            <div class="gnb-menu-dropdown dropdown-3"></div>
+            <div class="gnb-menu-dropdown dropdown-3">
+              <ul class="gnb-menu-dropdown-list">
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">FAQ</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">친절상담</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">A/S 신청</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">A/S 안내</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">매장 찾기</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">품질 보증 서비스</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">제품설명서 다운로드</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">카탈로그 다운로드</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">사업제안</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">대리점 개설문의</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="gnb-menu-dropdown-txt">대량 구매 문의</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>

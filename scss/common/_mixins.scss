@@ -1,8 +1,14 @@
-@mixin flex($justify: stretch, $align: stretch, $direction: row) {
+@mixin flex($justify: false, $align: false, $direction: false) {
   display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
+  @if ($justify) {
+    justify-content: $justify;
+  }
+  @if ($align) {
+    align-items: $align;
+  }
+  @if ($direction) {
+    flex-direction: $direction;
+  }
 }
 
 @mixin icon($name) {
