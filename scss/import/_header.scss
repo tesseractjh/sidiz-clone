@@ -8,8 +8,8 @@
       border-bottom: 1px solid #bcbcbc;
 
       &-cont {
+        @extend %container-width;
         @include flex(flex-end);
-        width: calc(100% - 240px);
       }
     }
 
@@ -72,7 +72,7 @@
     & li {
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 13px;
-      @extend %txt-hover;
+      @include txt-hover('blue');
     }
   }
 
@@ -107,7 +107,7 @@
   &-item {
     @include flex(center, center);
     height: 60px;
-    @extend %txt-hover;
+    @include txt-hover('blue');
   }
 
   &-item:hover &-dropdown {
@@ -117,6 +117,7 @@
   &-txt {
     display: inline-block;
     padding-top: 5px;
+    font-family: 'Centra Bold', sans-serif;
     font-weight: 700;
     font-size: 16px;
   }
@@ -139,7 +140,7 @@
       height: 18px;
       padding-bottom: 20px;
       box-sizing: content-box;
-      @extend %txt-hover;
+      @include txt-hover('blue');
     }
   }
 }
@@ -174,7 +175,8 @@
     height: 100%;
     border-right: 1px solid #444444;
     box-sizing: content-box;
-    @extend %txt-hover;
+    font-family: 'Centra Bold', 'Noto Sans KR', sans-serif;
+    @include txt-hover('blue');
   }
 
   &-list {
@@ -190,7 +192,8 @@
       display: inline-block;
       box-sizing: content-box;
       margin-right: 15px;
-      @extend %txt-hover;
+      font-family: 'Centra Bold', 'Noto Sans KR', sans-serif;
+      @include txt-hover('blue');
     }
   }
 }
@@ -204,6 +207,6 @@
 
   &-hover {
     font-weight: 700;
-    @extend %txt-hover;
+    @include txt-hover('blue');
   }
 }

@@ -11,6 +11,18 @@
   }
 }
 
+@mixin txt-hover($color) {
+  @if ($color == 'blue') {
+    &:hover {
+      color: #002BD2;
+    }
+  } @else if ($color == 'black') {
+    &:hover {
+      color: #000000;
+    }
+  }
+}
+
 @mixin icon($name) {
   font-family: '맑은 고딕', sans-serif;
   font-size: 12px;

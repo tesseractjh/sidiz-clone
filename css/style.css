@@ -77,11 +77,15 @@ a:visited {
   src: url("../fonts/CentraNo2-Book.woff");
 }
 @font-face {
+  font-family: "Centra Bold";
+  src: url("../fonts/CentraNo2-Bold.woff");
+}
+@font-face {
   font-family: "Noto Sans KR";
   src: url("../fonts/NotoSansKR-Regular.woff");
 }
 * {
-  font-family: "Centra", sans-serif;
+  font-family: "Centra", "Noto Sans KR", sans-serif;
   box-sizing: border-box;
 }
 
@@ -96,8 +100,8 @@ a:visited {
   clip: rect(0, 0, 0, 0);
 }
 
-.bold-hover:hover, .dropdown-list-txt:hover, .dropdown-txt:hover, .gnb-menu-dropdown-txt:hover, .gnb-menu-item:hover, .link-list-wrap li:hover {
-  color: #002BD2;
+.slide-item, .header-gnb-top-cont {
+  width: calc(100% - 240px);
 }
 
 .header-gnb-top {
@@ -109,7 +113,6 @@ a:visited {
 .header-gnb-top-cont {
   display: flex;
   justify-content: flex-end;
-  width: calc(100% - 240px);
 }
 .header-gnb-bottom {
   display: flex;
@@ -174,6 +177,9 @@ a:visited {
 .link-list-wrap li {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 13px;
+}
+.link-list-wrap li:hover {
+  color: #002BD2;
 }
 .link-list-compare {
   font-family: "맑은 고딕", sans-serif;
@@ -249,12 +255,16 @@ a:visited {
   align-items: center;
   height: 60px;
 }
+.gnb-menu-item:hover {
+  color: #002BD2;
+}
 .gnb-menu-item:hover .gnb-menu-dropdown {
   display: block;
 }
 .gnb-menu-txt {
   display: inline-block;
   padding-top: 5px;
+  font-family: "Centra Bold", sans-serif;
   font-weight: 700;
   font-size: 16px;
 }
@@ -275,6 +285,9 @@ a:visited {
   height: 18px;
   padding-bottom: 20px;
   box-sizing: content-box;
+}
+.gnb-menu-dropdown-txt:hover {
+  color: #002BD2;
 }
 
 .dropdown-1 {
@@ -304,6 +317,10 @@ a:visited {
   height: 100%;
   border-right: 1px solid #444444;
   box-sizing: content-box;
+  font-family: "Centra Bold", "Noto Sans KR", sans-serif;
+}
+.dropdown-txt:hover {
+  color: #002BD2;
 }
 .dropdown-list {
   display: flex;
@@ -319,6 +336,10 @@ a:visited {
   display: inline-block;
   box-sizing: content-box;
   margin-right: 15px;
+  font-family: "Centra Bold", "Noto Sans KR", sans-serif;
+}
+.dropdown-list-txt:hover {
+  color: #002BD2;
 }
 
 .bold {
@@ -329,6 +350,101 @@ a:visited {
 }
 .bold-hover {
   font-weight: 700;
+}
+.bold-hover:hover {
+  color: #002BD2;
+}
+
+.main-section-slide {
+  position: relative;
+  border-bottom: 1px solid #000000;
+}
+
+.slide-item {
+  display: flex;
+  margin: 40px auto 120px;
+}
+.slide-left {
+  width: 500px;
+  margin-top: 90px;
+  font-family: "Centra Bold", "Noto Sans KR", sans-serif;
+}
+.slide-left-title {
+  font-size: 60px;
+  line-height: 80px;
+  letter-spacing: -3px;
+  white-space: pre-line;
+}
+.slide-left-name {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 80px;
+  line-height: 104px;
+}
+.slide-left-btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  white-space: pre-line;
+  color: #999999;
+}
+.slide-left-btn:hover {
+  color: #000000;
+}
+.slide-left-btn::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  background: url("../images/slide_left01.png") no-repeat;
+  background-size: contain;
+}
+.slide-left-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 72px;
+  width: 28px;
+  height: 28px;
+  background: url("../images/outlink_play.svg") no-repeat;
+  background-size: contain;
+}
+.slide-right {
+  flex: 1;
+  height: 900px;
+  background: url("../images/slide_right01.jpg") no-repeat center;
+  background-size: cover;
+}
+.slide-control {
+  display: flex;
+  position: absolute;
+  left: 120px;
+  bottom: 300px;
+}
+.slide-btn {
+  width: 75px;
+  height: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide-btn-prev {
+  margin-right: 20px;
+  background-image: url("../images/prev.png");
+}
+.slide-btn-prev:hover {
+  background-image: url("../images/prev_hover.png");
+}
+.slide-btn-next {
+  background-image: url("../images/next.png");
+}
+.slide-btn-next:hover {
+  background-image: url("../images/next_hover.png");
 }
 
 /*# sourceMappingURL=style.css.map */

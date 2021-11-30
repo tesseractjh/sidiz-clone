@@ -73,11 +73,15 @@ a {
   src: url('../fonts/CentraNo2-Book.woff');
 }
 @font-face {
+  font-family: 'Centra Bold';
+  src: url('../fonts/CentraNo2-Bold.woff');
+}
+@font-face {
   font-family: 'Noto Sans KR';
   src: url('../fonts/NotoSansKR-Regular.woff');
 }
 * {
-  font-family: 'Centra', sans-serif;
+  font-family: 'Centra', 'Noto Sans KR', sans-serif;
 	box-sizing: border-box;
 }
 .sr-only {

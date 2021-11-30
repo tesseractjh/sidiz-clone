@@ -1,0 +1,109 @@
+.main {
+  &-section-slide {
+    position: relative;
+    border-bottom: 1px solid #000000;
+  }
+}
+
+.slide {
+
+  &-item {
+    @include flex;
+    @extend %container-width;
+    margin: 40px auto 120px;
+  }
+
+  &-left {
+    width: 500px;
+    margin-top: 90px;
+    font-family: 'Centra Bold', 'Noto Sans KR', sans-serif;
+
+    &-title {
+      font-size: 60px;
+      line-height: 80px;
+      letter-spacing: -3px;
+      white-space: pre-line;
+    }
+
+    &-name {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 80px;
+      line-height: 104px;
+    }
+
+    &-btn {
+      @include flex(false, center);
+      position: relative;
+      margin-top: 40px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: left;
+      white-space: pre-line;
+      color: #999999;
+      @include txt-hover('black');
+      
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        background: url('../images/slide_left01.png') no-repeat;
+        background-size: contain;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 72px;
+        width: 28px;
+        height: 28px;
+        background: url('../images/outlink_play.svg') no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &-right {
+    flex: 1;
+    height: 900px;
+    background: url('../images/slide_right01.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  &-control {
+    @include flex;
+    position: absolute;
+    left: 120px;
+    bottom: 300px;
+
+  }
+
+  &-btn {
+    width: 75px;
+    height: 26px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-prev {
+      margin-right: 20px;
+      background-image: url('../images/prev.png');
+
+      &:hover {
+        background-image: url('../images/prev_hover.png');
+      }
+    }
+
+    &-next {
+      background-image: url('../images/next.png');
+
+      &:hover {
+        background-image: url('../images/next_hover.png');
+      }
+    }
+  }
+}
