@@ -5,8 +5,55 @@
   }
 }
 
-.slide {
+.fixed-link {
+  @include flex(false, center, column);
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 10;
 
+  & a {
+    display: inline-block;
+    width: 99px;
+    height: 36px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 15%);
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  .find-store {
+    margin-bottom: 10px;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      padding-right: 3px;
+      background: url('../images/img_icon.svg') no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+    }
+  }
+
+  .inquiry-bot {
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      padding-right: 3px;
+      background: url('../images/kakao_icon.svg') no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+    }
+  }
+}
+
+.slide {
   &-item {
     @include flex;
     @extend %container-width;
