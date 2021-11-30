@@ -381,28 +381,23 @@ a:visited {
   line-height: 19px;
   text-align: center;
 }
+.fixed-link a:before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  padding-right: 3px;
+  background-size: contain;
+  vertical-align: middle;
+}
 .fixed-link .find-store {
   margin-bottom: 10px;
 }
 .fixed-link .find-store:before {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  padding-right: 3px;
   background: url("../images/img_icon.svg") no-repeat;
-  background-size: contain;
-  vertical-align: middle;
 }
 .fixed-link .inquiry-bot:before {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  padding-right: 3px;
   background: url("../images/kakao_icon.svg") no-repeat;
-  background-size: contain;
-  vertical-align: middle;
 }
 
 .slide-item {
