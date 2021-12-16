@@ -18,23 +18,11 @@ const slideAnimation = (isRight = true) => {
 
 let slideTimer = setInterval(slideAnimation, 5000);
 
-//prevButton.addEventListener('click', () => {
-//  clearInterval(slideTimer);
-//  slideAnimation(false);
-//  slideTimer = setInterval(slideAnimation, 5000);
-//});
-//
-//nextButton.addEventListener('click', () => {
-//  clearInterval(slideTimer);
-//  slideAnimation();
-//  slideTimer = setInterval(slideAnimation, 5000);
-//});
-
 let wait = time => {
   return new Promise((resolve) => {
     setTimeout(resolve, time);
   });
-}
+};
 
 prevButton.addEventListener('click', () => {
   if (!clickFlag) return;

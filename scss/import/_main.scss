@@ -1,7 +1,6 @@
 .main {
   &-section-slide {
     position: relative;
-    border-bottom: 1px solid #000000;
   }
 }
 
@@ -173,5 +172,83 @@
 
   &-show {
     opacity: 1;
+  }
+}
+
+.product {
+  border-top: 1px solid #000000;
+
+  &-wrap {
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  &-wrap2 {
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+    padding: 80px 0 120px;
+  }
+
+  &-title {
+    @include flex(space-between, flex-end);
+    margin-bottom: 35px;
+
+    &-txt {
+      font-size: 34px;
+      line-height: 44px;
+    }
+
+    &-link {
+      position: absolute;
+      top: 31px;
+      right: 0;
+      font-size: 13px;
+      color: $blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-display1 {
+    @include flex(false, false, column);
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 1832px;
+  }
+
+  &-display2 {
+    @include flex(space-between);
+
+    & .product-img {
+      width: 340px;
+    }
+  }
+
+  &-item {
+    padding-bottom: 80px;
+
+    &-title {
+      margin: 30px 0 10px;
+      font-family: 'Centra Bold', sans-serif;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 65px;
+      text-align: center;
+    }
+
+    &-txt {
+      display: block;
+      font-size: 24px;
+      line-height: 31px;
+      text-align: center;
+    }
+  }
+
+  &.pd-top {
+    padding-top: 80px;
   }
 }
