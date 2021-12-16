@@ -248,7 +248,15 @@
     }
   }
 
+  &-img:hover {
+    opacity: 80%;
+  }
+
   &.pd-top {
     padding-top: 80px;
   }
+}
+
+.link-top {
+  top: 111px;
 }

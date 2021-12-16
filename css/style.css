@@ -628,8 +628,15 @@ a:visited {
   line-height: 31px;
   text-align: center;
 }
+.product-img:hover {
+  opacity: 80%;
+}
 .product.pd-top {
   padding-top: 80px;
+}
+
+.link-top {
+  top: 111px;
 }
 
 /*# sourceMappingURL=style.css.map */
