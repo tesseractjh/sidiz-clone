@@ -704,6 +704,7 @@ a:visited {
 .notice-instagram-link {
   display: flex;
   align-items: center;
+  width: fit-content;
   margin-bottom: 30px;
   font-size: 20px;
 }
