@@ -182,6 +182,10 @@
     position: relative;
     width: 1220px;
     margin: 0 auto;
+
+    & .product-item {
+      padding-bottom: 80px;
+    }
   }
 
   &-wrap2 {
@@ -229,7 +233,6 @@
   }
 
   &-item {
-    padding-bottom: 80px;
 
     &-title {
       margin: 30px 0 10px;
@@ -257,6 +260,144 @@
   }
 }
 
+
+
 .link-top {
   top: 111px;
+}
+
+.notice {
+  background-color: #F5F5F5;
+  
+  &-wrap {
+    width: 1220px;
+    padding: 80px 0 120px;
+    margin: 0 auto;
+  }
+
+  &-news {
+    @include flex();
+    height: 60px;
+    margin-bottom: 80px;
+    text-align: center;
+
+    &-title {
+      @include flex(center, center);
+      width: 12%;
+      background-color: #002BD2;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+      color: #FFFFFF;
+    }
+
+    &-article {
+      @include flex(center, center);
+      flex: 1;
+      padding-left: 25%;
+      background-color: #DDE6FF;
+      font-size: 14px;
+
+      &-title {
+        font-weight: 700;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &-date {
+        padding-left: 10px;
+        color: #555555;
+      }
+    }
+
+    &-link {
+      padding-right: 1.5%;
+      margin-left: auto;
+      font-size: 12px;
+      text-decoration: underline;
+      color: #555555;
+
+      @include txt-hover('blue');
+    }
+  }
+
+  &-instagram {
+    &-link {
+      @include flex(false, center);
+      margin-bottom: 30px;
+      font-size: 20px;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        background: url('../../images/insta.png') no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &-list {
+      @include flex(space-between, center);
+      margin-bottom: 100px;
+    }
+
+    &-img {
+      width: 228px;
+      height: 228px;
+    }
+  }
+
+  &-blog {
+    @include flex(space-between);
+    line-height: normal;
+    &-article {
+      &-header {
+        @include flex(false, center);
+        margin-bottom: 30px;
+        font-size: 18px;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin-right: 15px;
+          background: url('../../images/blog-icon.png') no-repeat;
+        }
+      }
+
+      &-title {
+        width: 350px;
+        margin-bottom: 20px;
+        font-size: 32px;
+        font-weight: 900;
+        word-break: keep-all;
+      }
+
+      &-txt {
+        width: 380px;
+        margin-bottom: 30px;
+        font-size: 15px;
+        color: #555555;
+        word-break: keep-all;
+      }
+
+      &-link {
+        font-size: 13px;
+        text-decoration: underline;
+        color: #002BD2;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      width: 620px;
+      height: 350px;
+      background: url('../../images/blog.jpg') no-repeat;
+    }
+  }
 }

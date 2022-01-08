@@ -94,3 +94,10 @@ a {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
+.ellipsis {
+  width: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
